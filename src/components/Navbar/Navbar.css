@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 28px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-option {
+  font-size: 15px;
+  text-decoration: none;
+  color: inherit;
+}

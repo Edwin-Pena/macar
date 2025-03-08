@@ -1,0 +1,27 @@
+[
+  {
+    "id": "r-1",
+    "title": "Hashi Dress",
+    "img": "/images/hashi-dress2.jpg"
+  },
+  {
+    "id": "r-2",
+    "title": "Suna Blouse",
+    "img": "/images/suna-blouse.jpg"
+  },
+  {
+    "id": "r-3",
+    "title": "Moss Pant",
+    "img": "/images/moss-pant.jpg"
+  },
+  {
+    "id": "r-4",
+    "title": "Taki Set",
+    "img": "/images/taki-set.jpg"
+  },
+  {
+    "id": "r-5",
+    "title": "Sabi Blouse",
+    "img": "/images/sabi-blouse.jpg"
+  }
+]
