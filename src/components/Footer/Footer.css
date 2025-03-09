@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.newsletter {
+  margin-top: 20px;
+  padding: 0 15px;
+  color: #2e2e2e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+  /* padding: 0 15px; */
+  border: 1px solid #2e2e2e;
+  border-width: 1px 0 1px 0;
+  box-sizing: border-box;
+}
+
+.contact-text {
+  color: #2e2e2e;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.footer-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #2e2e2e;
+  transition: transform 0.2s ease;
+}
+
+.copyright {
+  color: #2e2e2e;
+  font-size: 11px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

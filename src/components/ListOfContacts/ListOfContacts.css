@@ -1,0 +1,24 @@
+.list-container {
+  display: none;
+  flex-direction: column;
+  margin: 0 0 15px 0;
+  padding: 0 25px;
+  gap: 10px;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list-link {
+  text-decoration: none;
+  font-size: 12px;
+  color: #a4a4a4;
+}
+
+.active {
+  display: flex;
+  min-height: 104px;
+}
