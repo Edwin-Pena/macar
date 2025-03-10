@@ -9,9 +9,6 @@ const Navbar = () => {
       <a href="" className="nav-logo">
         Macár
       </a>
-      <a href="" className="nav-option">
-        Suscribete
-      </a>
     </nav>
   );
 };
