@@ -6,6 +6,7 @@ interface Product {
   title: string;
   images: string[];
   price: string;
+  colors: { [key: string]: string };
 }
 
 interface Props {
@@ -14,12 +15,13 @@ interface Props {
 }
 
 const ProductPage: React.FC<Props> = ({ product, onBack }) => {
-  const { images, title, price } = product;
+  const { images, title, price, colors } = product;
   const carousel = useRef<HTMLDivElement>(null);
   const [count, setCount] = useState(0);
   const [shippingOptions, setShippingOptions] = useState(false);
   const [returns, setReturns] = useState(false);
   const [sizeGuide, setSizeGuide] = useState(false);
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
   const handleShippingOptions = () => {
     setShippingOptions(!shippingOptions);
@@ -57,6 +59,10 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
     setCount(newIndex);
   };
 
+  const handleColorSelection = (colorName: string) => {
+    setSelectedColor(colorName);
+  };
+
   return (
     <div className="product-page">
       <div className="carousel-container">
@@ -85,16 +91,25 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
         </div>
       </div>
 
-      {/* mor info */}
+      {/* more info */}
       <div className="more-info">
         <ul className="product-options">
           <li className="option">Descripción</li>
           <li className="option">
             <div className="product-colors">
-              <span className="text-color">Negro</span>
+              <span className="text-color">Colores disponibles:</span>
               <div className="colors-container">
-                <div className="color-box color1"></div>
-                <div className="color-box color2"></div>
+                {Object.entries(colors).map(([colorName, colorCode]) => (
+                  <div
+                    key={colorName}
+                    className={`color-box ${
+                      selectedColor === colorName ? "selected" : ""
+                    }`}
+                    style={{ backgroundColor: colorCode }}
+                    title={colorName}
+                    onClick={() => handleColorSelection(colorName)}
+                  ></div>
+                ))}
               </div>
             </div>
           </li>

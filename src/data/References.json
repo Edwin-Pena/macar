@@ -2,6 +2,9 @@
   {
     "id": "p-1",
     "title": "Hashi Dress",
+    "colors": {
+      "black": "#000"
+    },
     "images": [
       "/images/hashi-dress2.jpg",
       "/images/suna-blouse.jpg",
@@ -12,6 +15,10 @@
   {
     "id": "p-2",
     "title": "Suna Blouse",
+    "colors": {
+      "black": "#000",
+      "ivory": "#fff"
+    },
     "images": [
       "/images/suna-blouse.jpg",
       "/images/suna-blouse.jpg",
@@ -25,6 +32,10 @@
   {
     "id": "p-3",
     "title": "Moss Pant",
+    "colors": {
+      "black": "#000",
+      "ivory": "#fff"
+    },
     "images": [
       "/images/moss-pant.jpg",
       "/images/moss-pant.jpg",
@@ -38,6 +49,10 @@
   {
     "id": "p-4",
     "title": "Taki Set",
+    "colors": {
+      "black": "#000",
+      "brown": "#f39"
+    },
     "images": [
       "/images/taki-set.jpg",
       "/images/taki-set.jpg",
@@ -50,6 +65,10 @@
   {
     "id": "p-5",
     "title": "Sabi Blouse",
+    "colors": {
+      "ivory": "#fff",
+      "brown": "#f39"
+    },
     "images": [
       "/images/sabi-blouse.jpg",
       "/images/sabi-blouse.jpg",
