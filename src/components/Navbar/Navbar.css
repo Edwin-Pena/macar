@@ -5,8 +5,15 @@
   position: fixed;
   align-items: center;
   padding: 15px 10px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
   box-sizing: border-box;
   z-index: 100;
+}
+
+.nav.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
@@ -20,5 +27,5 @@
   text-decoration: none;
   color: inherit;
   position: absolute;
-  left: 20px;
+  right: 20px;
 }
