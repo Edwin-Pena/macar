@@ -4,9 +4,9 @@ import ListOfProducts from "./components/ListOfProducts/ListOfProducts";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ProductPage from "./components/ProductPage/ProductPage";
+import AboutUs from "./components/AboutUs/AboutUs";
 import { useState } from "react";
 
-// Definimos la estructura del producto
 interface Product {
   id: string;
   title: string;
@@ -16,24 +16,28 @@ interface Product {
 
 const App = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [view, setView] = useState<"home" | "product" | "about">("home");
 
   const handleProductClick = (id: string) => {
     const product = ProductsJson.find((p) => p.id === id);
     setSelectedProduct(product || null);
+    setView("product");
     window.scrollTo(0, 0);
   };
 
   const handleBack = () => {
     setSelectedProduct(null);
+    setView("home");
     window.scrollTo(0, 0);
-    console.log("volviendo");
   };
 
   return (
     <>
-      <Navbar />
-      {selectedProduct ? (
+      <Navbar onNavigate={setView} currentView={view} />
+      {view === "product" && selectedProduct ? (
         <ProductPage product={selectedProduct} onBack={handleBack} />
+      ) : view === "about" ? (
+        <AboutUs onNavigate={setView} />
       ) : (
         <>
           <ListOfProducts

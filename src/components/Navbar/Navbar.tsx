@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+interface NavbarProps {
+  onNavigate: (view: "home" | "about" | "product") => void;
+  currentView: "home" | "about" | "product";
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,10 +22,12 @@ const Navbar = () => {
 
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-      <a href="#" className="nav-option">
-        Nosotros
-      </a>
-      <a href="#" className="nav-logo">
+      {currentView === "home" && (
+        <a href="#" className="nav-option" onClick={() => onNavigate("about")}>
+          Nosotros
+        </a>
+      )}
+      <a href="#" className="nav-logo" onClick={() => onNavigate("home")}>
         macár
       </a>
     </nav>
