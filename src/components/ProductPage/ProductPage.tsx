@@ -180,8 +180,8 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           Envíos
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="12"
+            height="12"
             fill="currentColor"
             className={`bi bi-chevron-down chevron-product-page ${
               shippingOptions ? "rotate" : ""
@@ -190,17 +190,25 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           >
             <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <p className={`detailed-msg ${shippingOptions ? "-active" : ""}`}>
-            Envios. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          <div
+            className={`messages-container ${shippingOptions ? "-active" : ""}`}
+          >
+            <p className="detailed-msg">
+              Cali y alrededores: 3 a 7 días hábiles.
+            </p>
+            <p className="detailed-msg">
+              Otras ciudades: Despachamos en un máximo de 3 días hábiles, y el
+              tiempo de entrega dependerá de la transportadora.
+            </p>
+          </div>
         </div>
 
         <div className="detailed-info" onClick={handleReturns}>
           Cambios y devoluciones
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="12"
+            height="12"
             fill="currentColor"
             className={`bi bi-chevron-down chevron-product-page ${
               returns ? "rotate" : ""
@@ -209,9 +217,100 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           >
             <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
-          <p className={`detailed-msg ${returns ? "-active" : ""}`}>
-            Cambios y devoluciones. Lorem ipsum dolor sit amet.
-          </p>
+          <div className={`messages-container ${returns ? "-active" : ""}`}>
+            <div className="detailed-msg-container">
+              <p className="detailed-msg">
+                Puedes solicitar el cambio o la devolución de un producto dentro
+                de los 5 días calendario siguientes a la recepción del paquete,
+                siempre que se cumplan las siguientes condiciones:
+              </p>
+              <ul className="list-detailed-msg">
+                <li>
+                  <p className="detailed-msg">
+                    La prenda debe estar en su estado original, con etiquetas y
+                    sin señales de uso.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    No debe presentar manchas de maquillaje, suciedad ni olores
+                    ajenos al producto.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    Debes enviar una fotografía clara del producto para validar
+                    el estado y el motivo de la solicitud.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="detailed-msg-container">
+              <p className="detailed-msg">
+                El cambio o devolución solo aplica en los siguientes casos:
+              </p>
+              <ul className="list-detailed-msg">
+                <li>
+                  <p className="detailed-msg">
+                    Si el producto llega en mal estado (costuras sueltas,
+                    manchas, olores fuertes, hoyos, rasgaduras) o no cumple con
+                    nuestros estándares de calidad. aplica únicamente para
+                    defectos de fabricación. No se considerarán defectos
+                    aquellos causados por desgaste de uso o por no seguir las
+                    instrucciones de cuidado y lavado.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    Si la talla o el color recibido no corresponde con el
+                    solicitado en la compra.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    Si el producto recibido es incorrecto o no coincide con las
+                    imágenes de referencia.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="detailed-msg-container">
+              <p className="detailed-msg">
+                Opciones de reembolso o cambio: Una vez aprobada la solicitud*,
+                puedes elegir entre las siguientes opciones:
+              </p>
+              <ol className="list-detailed-msg">
+                <li>
+                  <p className="detailed-msg">
+                    Cambio por la misma prenda en perfectas condiciones.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    Devolución del dinero a través del mismo método de pago
+                    utilizado en la compra.
+                  </p>
+                </li>
+                <li>
+                  <p className="detailed-msg">
+                    Entrega de un bono por el valor de la compra, válido por 6
+                    meses, para redimir en una próxima compra.
+                  </p>
+                </li>
+              </ol>
+              <p className="extra-detailed-msg">
+                *Tener en cuenta que, si la prenda puede ser reparada,
+                procederemos con las reparaciones necesarias.
+              </p>
+              <p className="extra-detailed-msg">
+                Importante: No realizamos cambios por talla, ya que
+                proporcionamos una guía de medidas detallada para que cada
+                clienta elija la talla más adecuada antes de su compra.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

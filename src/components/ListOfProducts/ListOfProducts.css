@@ -18,8 +18,11 @@
 
 .product-title {
   position: absolute;
-  left: 5px;
-  bottom: 5px;
+  left: 10px;
+  bottom: 8px;
+  color: #000;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 div:nth-child(1) {
