@@ -13,3 +13,7 @@ body {
 .rotate {
   transform: rotate(-180deg);
 }
+
+.chevron-back {
+  color: #757575;
+}

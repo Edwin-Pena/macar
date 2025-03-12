@@ -94,7 +94,16 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
     <div className="product-page">
       <div className="carousel-container">
         <div className="back-button" onClick={onBack}>
-          ‹‹ Volver
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            fill="currentColor"
+            className="bi bi-chevron-left chevron-back"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+          </svg>
         </div>
         <div
           className="carousel-btn left-btn"
@@ -115,7 +124,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
               />
             </div>
           ))}
-          {/* Indicador de barra */}
+          {/*bar indicador */}
           <ul className="bar-indicador">
             {images.map((_, index) => (
               <span
@@ -129,7 +138,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
         </div>
       </div>
 
-      {/* Más información */}
+      {/* more info */}
       <div className="more-info">
         <ul className="product-options">
           <li className="option">Descripción</li>
