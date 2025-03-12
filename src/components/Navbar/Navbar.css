@@ -3,6 +3,8 @@
   width: 100%;
   justify-content: center;
   position: fixed;
+  top: 0;
+  left: 0;
   align-items: center;
   padding: 15px 10px;
   background-color: transparent;
