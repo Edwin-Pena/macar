@@ -73,25 +73,25 @@
 }
 
 .bar-indicador {
-  width: unset;
+  width: 100%;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 150px;
+  bottom: 0;
 }
 
 .img-indicador {
-  width: calc(100vw / 5);
-  content: "";
+  flex: 1;
+  height: 2px;
+  background: transparent;
+  transition: background 0.2s;
 }
 
-/* active for bar indicador of photos */
-/* .-active {
+.active-bar-indicador {
   background: #000;
-  height: 2px;
-} */
+}
 
 .buy-container {
   display: flex;

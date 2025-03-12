@@ -88,6 +88,17 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
               />
             </div>
           ))}
+          {/* indicador-bar */}
+          <ul className="bar-indicador">
+            {images.map((_, index) => (
+              <span
+                key={index}
+                className={`img-indicador ${
+                  count === index ? "active-bar-indicador" : ""
+                }`}
+              ></span>
+            ))}
+          </ul>
         </div>
       </div>
 
