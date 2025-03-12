@@ -12,14 +12,14 @@
 }
 
 .nav.scrolled {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .nav-logo {
-  font-size: 28px;
+  /* font-size: 28px; */
   text-decoration: none;
   color: inherit;
+  width: 120px;
 }
 
 .nav-option {
@@ -28,4 +28,5 @@
   color: inherit;
   position: absolute;
   right: 20px;
+  color: #000;
 }

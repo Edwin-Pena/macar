@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import macarLogo from "/images/macar-logo.png";
 import "./Navbar.css";
 
 interface NavbarProps {
@@ -27,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
           Nosotros
         </a>
       )}
-      <a href="#" className="nav-logo" onClick={() => onNavigate("home")}>
-        macár
+      <a href="#" onClick={() => onNavigate("home")}>
+        <img src={macarLogo} alt="macar-logo" className="nav-logo" />
       </a>
     </nav>
   );
