@@ -4,6 +4,7 @@ import "./ProductPage.css";
 interface Product {
   id: string;
   title: string;
+  description: string;
   images: string[];
   price: string;
   colors: { [key: string]: string };
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const ProductPage: React.FC<Props> = ({ product, onBack }) => {
-  const { images, title, price, colors } = product;
+  const { images, title, description, price, colors } = product;
   const carousel = useRef<HTMLDivElement>(null);
   const [count, setCount] = useState(0);
   const [shippingOptions, setShippingOptions] = useState(false);
@@ -141,7 +142,9 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
       {/* more info */}
       <div className="more-info">
         <ul className="product-options">
-          <li className="option">Descripción</li>
+          <li className="option">
+            <p className="product-desc">{description}</p>
+          </li>
           <li className="option">
             <div className="product-colors">
               <span className="text-color">Colores disponibles:</span>
