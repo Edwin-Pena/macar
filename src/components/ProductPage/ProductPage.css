@@ -191,6 +191,7 @@
   box-sizing: border-box;
   flex-direction: column;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .detailed-msg {

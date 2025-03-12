@@ -55,13 +55,40 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
       return;
     }
 
-    carousel.current.scrollTo(carousel.current.scrollLeft + width * delta, 0);
+    carousel.current.scrollTo({
+      left: carousel.current.scrollLeft + width * delta,
+      behavior: "smooth",
+    });
     setCount(newIndex);
   };
 
   const handleColorSelection = (colorName: string) => {
     setSelectedColor(colorName);
   };
+
+  // Escucha el scroll en móviles y actualiza el indicador
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!carousel.current) return;
+
+      const scrollLeft = carousel.current.scrollLeft;
+      const width = carousel.current.offsetWidth;
+      const newIndex = Math.round(scrollLeft / width);
+
+      setCount(newIndex);
+    };
+
+    const carouselRef = carousel.current;
+    if (carouselRef) {
+      carouselRef.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (carouselRef) {
+        carouselRef.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
 
   return (
     <div className="product-page">
@@ -88,7 +115,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
               />
             </div>
           ))}
-          {/* indicador-bar */}
+          {/* Indicador de barra */}
           <ul className="bar-indicador">
             {images.map((_, index) => (
               <span
@@ -102,7 +129,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
         </div>
       </div>
 
-      {/* more info */}
+      {/* Más información */}
       <div className="more-info">
         <ul className="product-options">
           <li className="option">Descripción</li>
@@ -136,7 +163,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           </li>
         </ul>
 
-        {/* size guide */}
+        {/* Guía de tallas */}
         <div className={`size-guide-window ${sizeGuide ? "visible" : ""}`}>
           <div className="size-guide">
             <span className="close-btn-guide" onClick={handleSizeGuide}>
@@ -165,9 +192,6 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           </svg>
           <p className={`detailed-msg ${shippingOptions ? "-active" : ""}`}>
             Envios. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Tempora quaerat tenetur velit ullam iste nisi, ab nulla dolorem
-            consectetur voluptatem pariatur blanditiis beatae, excepturi
-            delectus cum laborum similique neque voluptatum!
           </p>
         </div>
 
@@ -186,10 +210,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
             <path d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
           </svg>
           <p className={`detailed-msg ${returns ? "-active" : ""}`}>
-            Cambios y devoluciones. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Tempora quaerat tenetur velit ullam iste nisi, ab
-            nulla dolorem consectetur voluptatem pariatur blanditiis beatae,
-            excepturi delectus cum laborum similique neque voluptatum!
+            Cambios y devoluciones. Lorem ipsum dolor sit amet.
           </p>
         </div>
       </div>
