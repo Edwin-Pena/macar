@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar onNavigate={setView} currentView={view} />
+      <Navbar onNavigate={setView} />
       {view === "product" && selectedProduct ? (
         <ProductPage product={selectedProduct} onBack={handleBack} />
       ) : view === "about" ? (
@@ -47,7 +47,7 @@ const App = () => {
             products={ProductsJson}
             onProductClick={handleProductClick}
           />
-          <Footer />
+          <Footer onNavigate={setView} currentView={view} />
         </>
       )}
     </>

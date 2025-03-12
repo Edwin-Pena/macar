@@ -2,7 +2,12 @@ import { useState } from "react";
 import ListOfContacts from "../ListOfContacts/ListOfContacts";
 import "./Footer.css";
 
-const Footer = () => {
+interface Props {
+  onNavigate: (view: "home" | "about" | "product") => void;
+  currentView: "home" | "about" | "product";
+}
+
+const Footer: React.FC<Props> = ({ onNavigate, currentView }) => {
   const [contacts, setContacts] = useState(false);
 
   const handleClick = () => {
@@ -10,9 +15,19 @@ const Footer = () => {
   };
   return (
     <footer className="footer">
+      {currentView === "home" && (
+        <a
+          href="#"
+          className="footer-option"
+          onClick={() => onNavigate("about")}
+        >
+          Nosotros
+        </a>
+      )}
+
       <a
         href="https://forms.gle/rh6TSAB88bA9CjU37"
-        className="newsletter"
+        className="footer-option"
         target="_blank"
       >
         Únete a nuestro newsletter

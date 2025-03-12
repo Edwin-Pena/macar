@@ -3,11 +3,12 @@
   flex-direction: column;
 }
 
-.newsletter {
+.footer-option {
   margin-top: 20px;
-  padding: 0 15px;
+  padding: 0 0 0 15px;
   color: #757575;
   font-size: 12px;
+  width: fit-content;
   text-decoration: none;
 }
 

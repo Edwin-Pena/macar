@@ -16,17 +16,7 @@
 }
 
 .nav-logo {
-  /* font-size: 28px; */
   text-decoration: none;
   color: inherit;
   width: 120px;
-}
-
-.nav-option {
-  font-size: 15px;
-  text-decoration: none;
-  color: inherit;
-  position: absolute;
-  right: 20px;
-  color: #000;
 }

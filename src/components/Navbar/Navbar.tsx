@@ -4,10 +4,9 @@ import "./Navbar.css";
 
 interface NavbarProps {
   onNavigate: (view: "home" | "about" | "product") => void;
-  currentView: "home" | "about" | "product";
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,11 +22,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
 
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-      {currentView === "home" && (
-        <a href="#" className="nav-option" onClick={() => onNavigate("about")}>
-          Nosotros
-        </a>
-      )}
       <a href="#" onClick={() => onNavigate("home")}>
         <img src={macarLogo} alt="macar-logo" className="nav-logo" />
       </a>
