@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import "./ProductPage.css";
+import sizeGuideImg from "/images/size-guide.jpg";
 
 interface Product {
   id: string;
@@ -175,13 +176,17 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           </li>
         </ul>
 
-        {/* Guía de tallas */}
+        {/*size guide */}
         <div className={`size-guide-window ${sizeGuide ? "visible" : ""}`}>
-          <div className="size-guide">
+          <div className="size-guide-container">
             <span className="close-btn-guide" onClick={handleSizeGuide}>
               ×
             </span>
-            <h1>Guía de tallas</h1>
+            <img
+              src={sizeGuideImg}
+              className="size-guide"
+              alt="Guía de tallas"
+            />
           </div>
         </div>
 
