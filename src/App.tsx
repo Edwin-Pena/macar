@@ -12,6 +12,7 @@ interface Product {
   title: string;
   images: string[];
   price: string;
+  colors: Record<string, string>; // Corrige el error con los colores
 }
 
 const App = () => {
@@ -19,7 +20,9 @@ const App = () => {
   const [view, setView] = useState<"home" | "product" | "about">("home");
 
   const handleProductClick = (id: string) => {
-    const product = ProductsJson.find((p) => p.id === id);
+    const product = ProductsJson.find((p) => p.id === id) as
+      | Product
+      | undefined;
     setSelectedProduct(product || null);
     setView("product");
     window.scrollTo(0, 0);
