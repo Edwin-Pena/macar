@@ -21,7 +21,7 @@ const Footer: React.FC<Props> = ({ onNavigate, currentView }) => {
           className="footer-option"
           onClick={() => onNavigate("about")}
         >
-          Nosotros
+          Sobre Nosotros
         </a>
       )}
 
