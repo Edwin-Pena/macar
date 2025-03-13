@@ -10,6 +10,7 @@ import { useState } from "react";
 interface Product {
   id: string;
   title: string;
+  description: string;
   images: string[];
   price: string;
   colors: Record<string, string>; // Corrige el error con los colores
