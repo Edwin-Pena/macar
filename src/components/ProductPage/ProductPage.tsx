@@ -172,7 +172,11 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
             </span>
           </li>
           <li className="option">
-            <a href="#" className="help">
+            <a
+              href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20necesito%20asesor%C3%ADa%20con..."
+              className="help"
+              target="_blank"
+            >
               Necesito asesoría
             </a>
           </li>
@@ -338,7 +342,13 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           <span className="product-name">{title}</span>
           <span className="product-price">{price}</span>
         </div>
-        <button className="buy-button">COMPRAR AHORA</button>
+        <a
+          href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20quiero%20comprar..."
+          className="buy-button"
+          target="_blank"
+        >
+          COMPRAR AHORA
+        </a>
       </div>
     </div>
   );
