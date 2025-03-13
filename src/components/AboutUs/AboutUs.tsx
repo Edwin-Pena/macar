@@ -10,9 +10,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
       <div className="back-button" onClick={() => onNavigate("home")}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          fill="currentColor"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
           className="bi bi-chevron-left chevron-back"
           viewBox="0 0 16 16"
         >
@@ -21,9 +23,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
       </div>
 
       <div className="about-content">
-        <div className="principal-img"></div>
-        <h2 className="about-title">Más que una marca</h2>
-        <p className="about-text">
+        <div className="image-container">
+          <div className="principal-img"></div>
+          <h2 className="about-title">MÁS QUE UNA MARCA</h2>
+        </div>
+        <p className="about-text section-padding">
           Es la extensión de mi esencia. Soy una mujer soñadora, apasionada y
           creativa que encuentra en la moda un mundo muy interesante. Me fascina
           el olor de las telas, el sentir de las texturas y el sonido de la
@@ -35,7 +39,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           descubrirás mi visión de la moda, mis sentimientos, mis pensamientos y
           mi proceso.
         </p>
-        <p className="about-text">
+        <p className="about-text section-padding">
           Cada diseño nace con la intención de eliminar frustraciones, de
           abrazar la diversidad de cuerpos y de ofrecer piezas con las que
           puedas sentirte cómoda, poderosa y libre. Al igual que tú, soy una
@@ -45,9 +49,14 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </p>
       </div>
 
-      <div className="about-content">
-        <div className="about-img"></div>
-        <h2 className="about-title">Sostenibilidad - Fase 1</h2>
+      <div className="about-content section-padding">
+        <div className="image-container">
+          <div className="about-img"></div>
+          <div className="about-title">
+            <h2 className="title">SOSTENIBILIDAD</h2>
+            <span className="subtitle">FASE 1</span>
+          </div>
+        </div>
         <p className="about-text">
           Para nosotros, la sostenibilidad y la calidad son pilares
           fundamentales en nuestro universo. Creemos en una moda consciente y
@@ -63,9 +72,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </p>
       </div>
 
-      <div className="about-content">
-        <div className="about-img"></div>
-        <h2 className="about-title">Detalles</h2>
+      <div className="about-content section-padding">
+        <div className="image-container">
+          <div className="about-img"></div>
+          <h2 className="about-title">DETALLES</h2>
+        </div>
         <p className="about-text">
           Aquí es donde reside la verdadera belleza de MACAR: en los detalles.
           Cada pieza está cuidadosamente elaborada, con terminaciones hechas a
