@@ -13,7 +13,7 @@ interface Product {
   description: string;
   images: string[];
   price: string;
-  colors: Record<string, string>; // Corrige el error con los colores
+  colors: Record<string, string>;
 }
 
 const App = () => {
