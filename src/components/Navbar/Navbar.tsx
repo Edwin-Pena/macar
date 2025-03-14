@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import macarLogo from "/images/macar-logo.png";
 import "./Navbar.css";
 
 interface NavbarProps {
@@ -8,6 +7,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
+  const macarLogo = "/images/macar-logo.png";
 
   useEffect(() => {
     const handleScroll = () => {
