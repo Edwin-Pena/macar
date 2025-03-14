@@ -5,7 +5,7 @@ interface AboutUsProps {
 }
 
 const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
-  const aboutBannerImg = "/images/about-banner.png";
+  const aboutBannerImg = "/images/about-banner.jpg";
   const sustainabilityImg = "/images/sustainability.jpg";
   const detailsImg = "/images/details.jpg";
   return (
