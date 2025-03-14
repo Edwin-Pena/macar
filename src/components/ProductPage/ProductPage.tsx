@@ -167,6 +167,16 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
             </div>
           </li>
           <li className="option">
+            <div className="size">
+              <span className="size-title">Tallas:</span>
+              <ul className="sizes">
+                <li className="size-item">S</li>
+                <li className="size-item">M</li>
+                <li className="size-item">L</li>
+              </ul>
+            </div>
+          </li>
+          <li className="option">
             <span className="size-guide-btn" onClick={handleSizeGuide}>
               Guía de tallas
             </span>
@@ -343,7 +353,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
           <span className="product-price">{price}</span>
         </div>
         <a
-          href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20quiero%20comprar..."
+          href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20vengo%20del%20cat%C3%A1logo%20y%20me%20interesan%20las%20siguientes%20piezas%3A%0A%2AProducto%3A%2A%20%5BNombre%20de%20la%20prenda%5D%0A%2AColor%3A%2A%20%5BColor%20deseado%5D%0A%2ATalla%3A%2A%20%5BTalla%20seleccionada%5D"
           className="buy-button"
           target="_blank"
         >

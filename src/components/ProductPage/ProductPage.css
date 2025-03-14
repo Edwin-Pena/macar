@@ -171,6 +171,28 @@
   color: #a4a4a4;
 }
 
+.size {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.size-title {
+  font-size: 12px;
+}
+
+.sizes {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  column-gap: 15px;
+  padding: 0;
+}
+
+.size-item {
+  text-decoration: none;
+}
+
 .text-color {
   font-size: 12px;
 }
