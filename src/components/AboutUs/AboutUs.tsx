@@ -31,7 +31,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
           className="principal-img"
           alt="Mi abuela"
         ></img>
-        <div className="about-text-container">
+        <div className="about-text-container padding-about-content">
           <h2 className="title">MÁS QUE UNA MARCA</h2>
           <p className="about-text section-padding">
             Es la extensión de mi esencia. Soy una mujer soñadora, apasionada y
@@ -57,7 +57,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <div className="about-content">
+      <div className="about-content padding-about-content">
         <div className="image-container">
           <img
             src={sustainabilityImg}
@@ -87,7 +87,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <div className="about-content">
+      <div className="about-content padding-about-content">
         <div className="image-container">
           <img
             src={detailsImg}
