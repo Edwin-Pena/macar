@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   height: calc(100dvh - 18vh);
+  max-height: 82vh;
   max-width: 500px;
   position: relative;
 }
