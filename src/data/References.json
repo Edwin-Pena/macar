@@ -18,8 +18,8 @@
     "title": "Suna Blouse",
     "description": "Blusa drapeada con escote bandeja y piedra natural bordada a mano.",
     "colors": {
-      "black": "#000",
-      "ivory": "#fff"
+      "ivory": "#E0D6D4",
+      "black": "#000"
     },
     "images": [
       "/images/suna-blouse1.jpg",
@@ -37,7 +37,7 @@
     "description": "Pantalón tiro alto con abertura en bota, botones forrados y bolsillos traseros.",
     "colors": {
       "black": "#000",
-      "ivory": "#fff"
+      "ivory": "##E1D7D4"
     },
     "images": [
       "/images/moss-pant1.jpg",
@@ -55,8 +55,8 @@
     "title": "Taki Set",
     "description": "Set de top largo con  manga campana y escote profundo redondo. Short tiro alto con bolsillo en costado, ambos con detalle de plisado.",
     "colors": {
-      "black": "#000",
-      "brown": "#f39"
+      "brown": "#4A2922",
+      "black": "#000"
     },
     "images": [
       "/images/taki-set2.jpg",
@@ -72,8 +72,8 @@
     "title": "Sabi Blouse",
     "description": "Blusa de silueta geométrica y escote redondo, abertura en costados y silueteado con detalle en 3D.",
     "colors": {
-      "ivory": "#fff",
-      "brown": "#f39"
+      "brown": "#B0927A",
+      "ivory": "#E0D6D4"
     },
     "images": [
       "/images/sabi-blouse1.jpg",
