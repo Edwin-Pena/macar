@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: calc(100dvh - 18vh); */
-  height: calc(var(--fullHeight) - 18vh);
+  height: calc(100dvh - 18vh);
   overflow: hidden;
   max-width: 500px;
   position: relative;

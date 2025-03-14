@@ -25,26 +25,6 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
   const [sizeGuide, setSizeGuide] = useState(false);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
-  //set height of window
-
-  useEffect(() => {
-    function setFullHeight() {
-      document.documentElement.style.setProperty(
-        "--fullHeight",
-        `${window.innerHeight}px`
-      );
-    }
-
-    setFullHeight();
-    window.addEventListener("resize", setFullHeight);
-
-    return () => {
-      window.removeEventListener("resize", setFullHeight);
-    };
-  }, []);
-
-  //------------
-
   const handleShippingOptions = () => {
     setShippingOptions(!shippingOptions);
   };
