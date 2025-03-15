@@ -33,7 +33,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
         ></img>
         <div className="about-text-container padding-about-content">
           <h2 className="title">MÁS QUE UNA MARCA</h2>
-          <p className="about-text section-padding">
+          <p className="about-text">
             Es la extensión de mi esencia. Soy una mujer soñadora, apasionada y
             creativa que encuentra en la moda un mundo muy interesante. Me
             fascina el olor de las telas, el sentir de las texturas y el sonido
@@ -45,7 +45,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ onNavigate }) => {
             auténtica. Aquí descubrirás mi visión de la moda, mis sentimientos,
             mis pensamientos y mi proceso.
           </p>
-          <p className="about-text section-padding">
+          <p className="about-text">
             Cada diseño nace con la intención de eliminar frustraciones, de
             abrazar la diversidad de cuerpos y de ofrecer piezas con las que
             puedas sentirte cómoda, poderosa y libre. Al igual que tú, soy una
