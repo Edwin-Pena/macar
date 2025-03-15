@@ -21,10 +21,43 @@
   left: 10px;
   bottom: 8px;
   color: #000;
+  font-size: 12px;
   letter-spacing: 1px;
   font-weight: 500;
 }
 
 div:nth-child(1) {
   grid-column: 1/3;
+}
+
+@media (min-width: 1250px) {
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 600px);
+    gap: 2px;
+  }
+
+  .product-title {
+    left: 30px;
+    bottom: 15px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1250px) {
+  .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    gap: 2px;
+  }
+
+  .product-title {
+    left: 20px;
+    bottom: 15px;
+    font-size: 16px;
+  }
 }

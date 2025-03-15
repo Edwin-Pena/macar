@@ -4,7 +4,6 @@
   margin: 0 0 15px 0;
   padding: 0 15px;
   gap: 10px;
-  height: 0;
   transition: height 0.5s ease;
 }
 
@@ -21,4 +20,10 @@
 .active {
   display: flex;
   min-height: 104px;
+}
+
+@media (min-width: 1080px) {
+  .list-link {
+    font-size: 14px;
+  }
 }

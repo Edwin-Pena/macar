@@ -46,3 +46,17 @@
   margin-bottom: 15px;
   padding: 0 15px;
 }
+
+@media (min-width: 1080px) {
+  .footer-option {
+    font-size: 14px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}
