@@ -68,7 +68,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
     setSelectedColor(colorName);
   };
 
-  // Escucha el scroll en móviles y actualiza el indicador
+  // Listen to the scroll on mobile and update the indicator
   useEffect(() => {
     const handleScroll = () => {
       if (!carousel.current) return;
@@ -191,6 +191,71 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
             </a>
           </li>
         </ul>
+
+        {/* responsive product options */}
+        <div className="responsive-info-product">
+          <ul className="product-options-responsive">
+            <li className="option">
+              <p className="product-desc">{description}</p>
+            </li>
+            <li className="option">
+              <div className="product-colors">
+                <span className="text-color">Colores disponibles:</span>
+                <div className="colors-container">
+                  {Object.entries(colors).map(([colorName, colorCode]) => (
+                    <div
+                      key={colorName}
+                      className={`color-box ${
+                        selectedColor === colorName ? "selected" : ""
+                      }`}
+                      style={{ backgroundColor: colorCode }}
+                      title={colorName}
+                      onClick={() => handleColorSelection(colorName)}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            </li>
+            <li className="option">
+              <div className="size">
+                <span className="size-title">Tallas:</span>
+                <ul className="sizes">
+                  <li className="size-item">S</li>
+                  <li className="size-item">M</li>
+                  <li className="size-item">L</li>
+                </ul>
+              </div>
+            </li>
+            <li className="option">
+              <span className="size-guide-btn" onClick={handleSizeGuide}>
+                Guía de tallas
+              </span>
+            </li>
+            <li className="option">
+              <a
+                href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20necesito%20asesor%C3%ADa%20con..."
+                className="help"
+                target="_blank"
+              >
+                Necesito asesoría
+              </a>
+            </li>
+          </ul>
+
+          <div className="buy-container-responsive">
+            <div className="product-info">
+              <span className="product-name">{title}</span>
+              <span className="product-price">{price}</span>
+            </div>
+            <a
+              href="https://wa.me/573207893343?text=Hola%20mac%C3%A1r%2C%20vengo%20del%20cat%C3%A1logo%20y%20me%20interesan%20las%20siguientes%20piezas%3A%0A%2AProducto%3A%2A%20%5BNombre%20de%20la%20prenda%5D%0A%2AColor%3A%2A%20%5BColor%20deseado%5D%0A%2ATalla%3A%2A%20%5BTalla%20seleccionada%5D"
+              className="buy-button"
+              target="_blank"
+            >
+              COMPRAR AHORA
+            </a>
+          </div>
+        </div>
 
         {/*size guide */}
         <div className={`size-guide-window ${sizeGuide ? "visible" : ""}`}>

@@ -54,12 +54,6 @@
   cursor: pointer;
 }
 
-@media (width < 500px) {
-  .carousel-btn {
-    display: none;
-  }
-}
-
 .left-btn {
   border-bottom: 1px solid #000;
   border-left: 1px solid #000;
@@ -122,6 +116,7 @@
 
 .product-name {
   color: #2e2e2e;
+  font-size: 12px;
 }
 
 .product-price {
@@ -338,4 +333,118 @@
   text-decoration: 1px underline;
   text-underline-offset: 5px;
   font-size: 12px;
+}
+
+/* reponsive classes */
+
+.responsive-info-product {
+  width: 50%;
+  height: 99.9vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 150px;
+  box-sizing: border-box;
+}
+
+.product-options-responsive {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 25px 0 25px 0;
+  box-sizing: border-box;
+  row-gap: 15px;
+  margin-bottom: 30px;
+}
+
+.buy-container-responsive {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 0;
+  height: 18vh;
+  box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+  .carousel-container {
+    max-width: 50%;
+    height: 99.9vh;
+  }
+
+  .responsive-info-product {
+    display: flex;
+    padding: 20px;
+  }
+
+  .product-options-responsive {
+    display: flex;
+  }
+
+  .buy-container-responsive {
+    display: flex;
+  }
+
+  .size-guide-container {
+    height: 95%;
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .buy-container {
+    display: none;
+  }
+
+  .product-options {
+    display: none;
+  }
+
+  .more-info {
+    margin: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .responsive-info-product {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .responsive-info-product {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 1165px) {
+  .responsive-info-product {
+    padding: 0 150px;
+  }
+}
+
+@media (min-width: 1420px) {
+  .responsive-info-product {
+    padding: 0 200px;
+  }
+}
+
+@media (min-width: 1635px) {
+  .responsive-info-product {
+    padding: 0 250px;
+  }
+}
+
+@media (width < 500px) {
+  .carousel-btn {
+    display: none;
+  }
 }
