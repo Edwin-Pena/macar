@@ -239,6 +239,10 @@
   gap: 8px;
 }
 
+.detailed-msg-container {
+  max-width: 1200px;
+}
+
 .detailed-msg {
   margin: 0;
 }
