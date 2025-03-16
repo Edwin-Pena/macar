@@ -19,7 +19,7 @@
     "title": "Suna Blouse",
     "description": "Blusa drapeada con escote bandeja y piedra natural bordada a mano.",
     "colors": {
-      "ivory": "#E0D6D4",
+      "ivory": "#fffdfb",
       "black": "#000"
     },
     "images": [
@@ -37,7 +37,7 @@
     "title": "Moss Pant",
     "description": "Pantalón tiro alto con abertura en bota, botones forrados y bolsillos traseros.",
     "colors": {
-      "ivory": "##E1D7D4",
+      "ivory": "#fffdfb",
       "black": "#000"
     },
     "images": [
@@ -75,7 +75,7 @@
     "description": "Blusa de silueta geométrica y escote redondo, abertura en costados y silueteado con detalle en 3D.",
     "colors": {
       "brown": "#B0927A",
-      "ivory": "#E0D6D4"
+      "ivory": "#fffdfb"
     },
     "images": [
       "/images/sabi-blouse1.jpg",
