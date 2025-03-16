@@ -1,3 +1,10 @@
+/* -----global variables------- */
+:root {
+  --primary-black: #2e2e2e;
+  --primary-grey: #757575;
+  --secondary-grey: #a4a4a4;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -12,5 +19,5 @@ body {
 }
 
 .chevron-back {
-  color: #757575;
+  color: var(--primary-black);
 }
