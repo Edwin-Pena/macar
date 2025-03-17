@@ -298,6 +298,9 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
               Otras ciudades: Despachamos en un máximo de 3 días hábiles, y el
               tiempo de entrega dependerá de la transportadora.
             </p>
+            <p className="detailed-msg">
+              *El costo del envío no está incluido en el precio del producto.
+            </p>
           </div>
         </div>
 
