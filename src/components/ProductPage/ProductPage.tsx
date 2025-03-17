@@ -353,7 +353,7 @@ const ProductPage: React.FC<Props> = ({ product, onBack }) => {
                   <p className="detailed-msg">
                     Si el producto llega en mal estado (costuras sueltas,
                     manchas, olores fuertes, hoyos, rasgaduras) o no cumple con
-                    nuestros estándares de calidad. aplica únicamente para
+                    nuestros estándares de calidad. Aplica únicamente para
                     defectos de fabricación. No se considerarán defectos
                     aquellos causados por desgaste de uso o por no seguir las
                     instrucciones de cuidado y lavado.
