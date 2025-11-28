@@ -17,9 +17,9 @@
   grid-template-columns: repeat(3, auto);
 }
 
-.banner-link {
+/* .banner-link {
   display: flex;
-}
+} */
 
 .stone {
   width: 100%;

@@ -43,3 +43,9 @@ body {
   margin-bottom: 2px;
   position: relative;
 }
+
+.picture-fit {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}

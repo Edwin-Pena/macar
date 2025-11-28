@@ -2,16 +2,26 @@ import './Banner.css';
 
 interface Props {
   bannerImage: string;
+  bannerImageMobile: string;
   bannerTitle: string;
+  bannerTitleMobile: string;
   onBannerClick: (view: 'home' | 'product' | 'about' | 'banner-promo') => void;
 }
 
-const Banner: React.FC<Props> = ({ bannerImage, bannerTitle, onBannerClick }) => {
+const Banner: React.FC<Props> = ({ bannerImage, bannerImageMobile, bannerTitleMobile, bannerTitle, onBannerClick }) => {
   return (
     <div className='banner-container'>
-      <img src={bannerImage} alt='banner de collar' className='banner-image' />
+      <picture className='picture-fit'>
+        <source srcSet={bannerImageMobile} media='(max-width: 535px)' />
+        <img src={bannerImage} alt='banner de collar' className='banner-image' loading='lazy' />
+      </picture>
+
       <div className='content-container'>
-        <img src={bannerTitle} alt='título del banner' className='banner-title' />
+        <picture className='picture-fit'>
+          <source srcSet={bannerTitleMobile} media='(max-width: 535px)' />
+          <img src={bannerTitle} alt='título del banner' className='banner-title' loading='lazy' />
+        </picture>
+
         <div className='buttons-container'>
           <a
             href=''

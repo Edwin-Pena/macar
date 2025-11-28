@@ -8,6 +8,8 @@ import { useState } from 'react';
 import Banner from './components/Banner/Banner';
 import bannerImage from './images/banner-content/banner-necklace.jpg';
 import bannerTitle from './images/banner-content/banner-title.png';
+import bannerImageMobile from './images/banner-content/banner-mobile/banner-mobile.jpg';
+import bannerTitleMobile from './images/banner-content/banner-mobile/banner-title-mobile.png';
 import BannerPage from './components/BannerPage/BannerPage';
 
 interface Product {
@@ -47,7 +49,13 @@ const App = () => {
         <BannerPage onBack={handleBack} />
       ) : (
         <>
-          <Banner bannerImage={bannerImage} bannerTitle={bannerTitle} onBannerClick={setView} />
+          <Banner
+            bannerImage={bannerImage}
+            bannerImageMobile={bannerImageMobile}
+            bannerTitle={bannerTitle}
+            bannerTitleMobile={bannerTitleMobile}
+            onBannerClick={setView}
+          />
           <ListOfProducts products={products} onProductClick={handleProductClick} />
           <Footer onNavigate={setView} currentView={view} />
         </>
