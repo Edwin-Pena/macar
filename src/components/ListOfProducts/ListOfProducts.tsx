@@ -1,4 +1,4 @@
-import "./ListOfProducts.css";
+import './ListOfProducts.css';
 
 interface InfoProducts {
   id: string;
@@ -14,10 +14,10 @@ interface Props {
 
 const ListOfProducts: React.FC<Props> = ({ products, onProductClick }) => {
   return (
-    <div className="content">
+    <div className='content'>
       {products.map((product, index) => (
         <div
-          className="product-container"
+          className='product-container'
           key={product.id}
           onClick={() => {
             onProductClick(product.id);
@@ -25,23 +25,13 @@ const ListOfProducts: React.FC<Props> = ({ products, onProductClick }) => {
         >
           {index === 0 ? (
             <picture>
-              <source srcSet={product.images[0]} media="(max-width: 535px)" />
-              <img
-                src={product.images[3]}
-                alt={product.title}
-                className="product"
-                loading="lazy"
-              />
+              <source srcSet={product.images[0]} media='(max-width: 535px)' />
+              <img src={product.images[3]} alt={product.title} className='product' loading='lazy' />
             </picture>
           ) : (
-            <img
-              src={product.images[0]}
-              alt={product.title}
-              className="product"
-              loading="lazy"
-            />
+            <img src={product.images[0]} alt={product.title} className='product' loading='lazy' />
           )}
-          <span className="product-title">{product.title}</span>
+          <span className='product-title'>{product.title}</span>
         </div>
       ))}
     </div>

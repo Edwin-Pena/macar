@@ -8,21 +8,6 @@
   position: relative;
 }
 
-.back-button {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 22px;
-  left: 20px;
-  z-index: 150;
-  cursor: pointer;
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
 .carousel {
   display: flex;
   height: 100%;
